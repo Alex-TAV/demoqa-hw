@@ -19,3 +19,19 @@ class BasePage:
             return True
         else:
             return False
+
+# Метод back переходить обратно на страницу (стрелочка назад)
+    def back(self):
+        self.driver.back()
+
+# Метод forward переходить обратно на страницу (стрелочка вперёд)
+    def forward(self):
+        self.driver.forward()
+
+# Метод refresh обновление страницы
+    def refresh(self):
+        self.driver.refresh()
+
+# Метод get_title взять заголовок
+    def get_title(self):
+        return self.driver.title
