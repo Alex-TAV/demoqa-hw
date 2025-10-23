@@ -11,6 +11,9 @@ class WebElement:
     def find_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
 
+    def find_elements(self):
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
+
     def click(self):
         self.find_element().click()
 
@@ -21,13 +24,16 @@ class WebElement:
             return False
         return True
 
-
-# Домашнее задание №7
-# 1. в классе компонентов создайте метод для получения текста с элементов get_text(self).
-#  текст из элемента считывайте так str(self.find_element().text)
-
     def get_text(self):
         return str(self.find_element().text)
 
     def visible(self):
         return self.find_element().is_displayed()
+
+    def check_count_element(self, count:int) -> bool:
+        if len(self.find_elements()) == count:
+            return True
+        return False
+
+    def send_keys(self, text:str):
+        self.find_element().send_keys(text)
