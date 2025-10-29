@@ -19,8 +19,13 @@ class FormPage(BasePage):
         self.modal_dialog = WebElement(driver, 'body > div.fade.modal.show > div')
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
         self.user_form = WebElement(driver, '#userForm')
+
         self.select_state = WebElement(driver, '#react-select-3-input')
         self.select_state_check = WebElement(driver, '#state > div > div.css-1hwfws3 > div.css-1uccc91-singleValue')
         self.select_city = WebElement(driver, '#react-select-4-input')
         self.select_city_check = WebElement(driver, '#city > div > div.css-1hwfws3 > div.css-1uccc91-singleValue')
+
+        self.btn_state = WebElement(driver, '#state')
+
+        self.btn_NCR = WebElement(driver, "//*[contains(text(), 'NCR')]", 'xpath')
 
