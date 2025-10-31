@@ -20,6 +20,15 @@ class WebTablesPage(BasePage):
         self.check_first_name_4 = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(1)')
         self.page_number = WebElement(driver, 'input[type=number]')
 
+        # Столбцы таблицы
+        self.column_first_name_btn = WebElement(driver, 'div.rt-table > div.rt-thead.-header > div > div:nth-child(1)')
+        self.column_last_name_btn = WebElement(driver, 'div.rt-table > div.rt-thead.-header > div > div:nth-child(2)')
+        self.column_age_btn = WebElement(driver, 'div.rt-table > div.rt-thead.-header > div > div:nth-child(3)')
+        self.column_email_btn = WebElement(driver, 'div.rt-table > div.rt-thead.-header > div > div:nth-child(4)')
+        self.column_salary_btn = WebElement(driver, 'div.rt-table > div.rt-thead.-header > div > div:nth-child(5)')
+        self.column_department_btn = WebElement(driver, 'div.rt-table > div.rt-thead.-header > div > div:nth-child(6)')
+
+
         # Элементы ЭФ "Registration Form"
         self.first_name = WebElement(driver, 'input#firstName')
         self.last_name = WebElement(driver, 'input#lastName')

@@ -8,3 +8,7 @@ class ModalDialog(BasePage):
 
         self.btns_first_menu = WebElement(driver, 'div:nth-child(3) > div > ul > li')
         self.icon = WebElement(driver, '#app > header > a')
+        self.btn_small_modal = WebElement(driver, '#showSmallModal')
+        self.btn_close_small_modal = WebElement(driver, '#closeSmallModal')
+        self.btn_large_modal = WebElement(driver, '#showLargeModal')
+        self.btn_close_large_modal = WebElement(driver, '#closeLargeModal')
